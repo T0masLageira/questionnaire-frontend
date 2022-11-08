@@ -1,13 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './Login.css'
 
+let currentPage = true;
+
 function handleSubmit(e) {
     e.preventDefault();
     console.log('You clicked submit.');
+   currentPage = false;
   }
+
+  function page(currentPage){
+    return(currentPage)
+}
 
 export default function Login(props) {
     return (
+        
         <form className="Auth-for Login">
             <table>
                 <tr>
