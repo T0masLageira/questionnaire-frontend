@@ -6,9 +6,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
 
 
-function App() {
+function App(props) {
 
-  function handleFormState(props) { }
+  //function handleFormState(props) { }
 
   //const [form, changeForm] = useState('');
 
@@ -16,8 +16,6 @@ function App() {
     return (<Login></Login>)
   else if (!props.currentPage)
     return (<Form></Form>)
-
-
 }
 
 export default App;
