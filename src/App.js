@@ -8,13 +8,13 @@ import { useState } from 'react';
 
 function App() {
 
-  function handleFormState(currentPage) { }
+  function handleFormState(props) { }
 
   //const [form, changeForm] = useState('');
 
-  if (currentPage)
+  if (props.currentPage)
     return (<Login></Login>)
-  else if (!currentPage)
+  else if (!props.currentPage)
     return (<Form></Form>)
 
 
