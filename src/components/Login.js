@@ -1,21 +1,31 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import './Login.css'
+import Form from './Form.js'
 import { useState } from 'react';
 
-let currentPage = true;
 
 
-export default function Login(props) {
 
+
+function Login(props) {
+
+    
     const [username, setUsername] = useState();
     const [surname, setSurname] = useState();
     const [email, setEmail] = useState();
+
     function handleSubmit(e) {
         e.preventDefault();
         console.log('You clicked submit.');
-        currentPage = false;
-        props.handleFormState(currentPage);
     }
+
+    function changePage(){
+        
+       
+        props.onButtonClick("form");
+
+    }
+
     return (
         <form className="Auth-for Login">
             <table>
@@ -43,7 +53,7 @@ export default function Login(props) {
                     className="form-control mt-3"
                     placeholder="E-mail" />
                 <div className="d-grid gap-2 mt-3">
-                    <button type="button" className="btn btn-primary mt-5" onClick={handleSubmit}>
+                    <button type="button" className="btn btn-primary mt-5" onClick={changePage}>
                         Submit
                     </button>
                 </div>
@@ -51,3 +61,5 @@ export default function Login(props) {
         </form>
     )
 }
+
+export default Login;
